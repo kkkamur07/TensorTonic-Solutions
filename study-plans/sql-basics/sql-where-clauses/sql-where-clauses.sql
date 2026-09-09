@@ -1,0 +1,2 @@
+-- Write your SQL query here
+SELECT name, salary FROM employees WHERE (department = 'Engineering' OR department = 'Marketing') AND salary > 70000.0
