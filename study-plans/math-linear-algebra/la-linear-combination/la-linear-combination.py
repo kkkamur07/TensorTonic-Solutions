@@ -7,14 +7,18 @@ def linear_combination(vectors, coefficients):
     v = np.array(vectors)
     c = np.array(coefficients)
 
-    result = np.zeros(v[0].shape)
+    # result = np.zeros(v[0].shape)
     
-    if len(v) != len(c) :
-        raise "this cannot be done"
-    else : 
-        for i in range(len(v)) : 
-            result += (v[i] * c[i])
+    # if len(v) != len(c) :
+    #     raise "this cannot be done"
+    # else : 
+    #     for i in range(len(v)) : 
+    #         result += (v[i] * c[i])
 
-    return result
-            
+    # return result
+
+    v_st = np.vstack(vectors).T
+
+    return v_st @ c
+    
         
